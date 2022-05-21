@@ -20,11 +20,10 @@
         android:id="@+id/textView2"
         android:layout_width="232dp"
         android:layout_height="79dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="156dp"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="80dp"
         tools:ignore="MissingConstraints"
-         />
+        tools:layout_editor_absoluteX="89dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
