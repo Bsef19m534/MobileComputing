@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LessonApp">
         <activity
+            android:name=".setQ"
+            android:exported="false" />
+        <activity
+            android:name=".Q1"
+            android:exported="false" />
+        <activity
             android:name=".Lesson"
             android:exported="false" />
         <activity
