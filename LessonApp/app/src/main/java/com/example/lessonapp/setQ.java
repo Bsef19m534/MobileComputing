@@ -1,13 +1,18 @@
 package com.example.lessonapp;
 
 public class setQ
+
         {
-                public static String question[] ={
-                        "I For",
-                        "P For",
-                        "H For",
-                        "Z For",
-                        "C For"
+                public static int question[] ={
+                      R.drawable.ice_cream,
+                        R.drawable.peacock,
+                        R.drawable.hat,
+                        R.drawable.zebra,
+                        R.drawable.cat
+
+
+
+
                 };
 
                 public static String choices[][] = {

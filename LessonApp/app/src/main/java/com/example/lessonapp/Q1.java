@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.graphics.Color;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -17,19 +18,20 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
     Button op1,op2,op3,op4;
 
     int score=0;
-    int totalQuestion = setQ.question.length;
+    int totalQuestion = 5;
     int currentQuestionIndex = 0;
     String selectedAnswer = "";
-    TextView t,total;
+    TextView total;
+    ImageView v;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_q1);
-        t=findViewById(R.id.textView5);
+
 
         Button Submit;
-
+        v =findViewById(R.id.imageView5);
          op1=findViewById(R.id.op1);
         op2=findViewById(R.id.op2);
         op3=findViewById(R.id.op3);
@@ -61,7 +63,10 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
                 score++;
             }
             currentQuestionIndex++;
+
             loadNewQuestion();
+           // loadImage();
+
 
 
         }else{
@@ -72,6 +77,14 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
         }
 
     }
+
+    private void loadImage() {
+
+
+
+    }
+
+
     private void loadNewQuestion() {
 
         if(currentQuestionIndex == totalQuestion ){
@@ -79,7 +92,9 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
             return;
         }
 
-        t.setText(setQ.question[currentQuestionIndex]);
+
+          v.setImageResource(setQ.question[currentQuestionIndex]);
+
         op1.setText(setQ.choices[currentQuestionIndex][0]);
         op2.setText(setQ.choices[currentQuestionIndex][1]);
         op3.setText(setQ.choices[currentQuestionIndex][2]);

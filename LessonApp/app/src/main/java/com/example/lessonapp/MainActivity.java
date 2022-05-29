@@ -1,5 +1,7 @@
 package com.example.lessonapp;
 
+import static com.example.lessonapp.R.drawable.balloon;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -41,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this,Q1.class);
-
                 startActivity(intent);
             }
         });
