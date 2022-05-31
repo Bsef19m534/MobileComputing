@@ -14,16 +14,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class Q1 extends AppCompatActivity implements View.OnClickListener {
     Button op1,op2,op3,op4;
 
     int score=0;
     int totalQuestion = 5;
-    int currentQuestionIndex = 0;
+    int currentQuestionIndex ;
     String selectedAnswer = "";
     TextView total;
     ImageView v;
-
+    int i=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,10 +64,12 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
             if(selectedAnswer.equals(setQ.correctAnswers[currentQuestionIndex])){
                 score++;
             }
-            currentQuestionIndex++;
+
+
+            currentQuestionIndex  = new Random().nextInt(25);
 
             loadNewQuestion();
-           // loadImage();
+            i++;
 
 
 
@@ -78,16 +82,12 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-    private void loadImage() {
 
-
-
-    }
 
 
     private void loadNewQuestion() {
 
-        if(currentQuestionIndex == totalQuestion ){
+        if(i == totalQuestion ){
             finishQuiz();
             return;
         }
@@ -120,7 +120,8 @@ public class Q1 extends AppCompatActivity implements View.OnClickListener {
 
     private void restartQuiz() {
         score = 0;
-        currentQuestionIndex =0;
+        currentQuestionIndex = new Random().nextInt(25);
+        i=1;
         loadNewQuestion();
     }
 
